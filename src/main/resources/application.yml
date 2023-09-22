@@ -1,0 +1,26 @@
+logging:
+  level:
+    com.adn.pos: TRACE
+    jdbc.connection: OFF
+    # jdbc.sqlonly:OFF
+    jdbc.resultset: OFF
+    jdbc.sqltiming: OFF
+    jdbc.audit: OFF
+    jdbc.resultsettable: OFF
+log4jdbc.dump.sql.addsemicolon: true
+
+spring:
+    datasource:
+        url: jdbc:postgresql://127.0.0.1:5433/tokoku?reWriteBatchedInserts=true
+        username: postgres
+        password: lucky
+#server:
+#  error:
+#    :include-message: always
+app:
+  baseurl:
+    storage: http://127.0.0.1:8080/storage/
+  jwt:
+    secret: ============12321321===========fsdakfjdkasfjwqjrlkjflasfjad=========================
+    expirationMs: 86400000
+    refreshExpirationMs: 120000000
